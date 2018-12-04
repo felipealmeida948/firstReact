@@ -1,0 +1,260 @@
+//Imports*******************************
+@import 'reset';
+@import 'mixins';
+@import 'fonts';
+@import 'var';
+@import 'grid';
+@import 'colors';
+
+//COMPONETES****************************
+@import 'components/colors';
+@import 'components/buttons';
+@import 'components/grid';
+@import 'components/input';
+
+
+
+
+.content{
+
+    //Menu
+    .header{
+        height: 80px;
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(row);
+        position: fixed;
+        background-color: $color-segundary;
+        z-index: 1;
+        // box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.19);
+
+        .menu{
+            width: 100%;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            font-family: $fontPlutoLight;
+            color: $color-primary;
+            font-weight: 100;
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(space-between);
+            @include align-self(center);
+
+            .left{
+
+
+                .logo{
+                    h1 {
+                        font-family: $fontPlutoThin;
+                        color: $color-default;
+                        font-size: 1.4rem;
+                        margin-top: 7px;
+                    }
+                }
+            }
+
+            .right {
+                width: fit-content;
+                @include flexbox();
+                @include flex-direction(row);
+
+                .item {
+                    padding: 10px 20px 10px 20px;
+
+                    a {
+                        font-size: $font-size-medium;
+                        font-style: none;
+                        text-decoration: none;
+                        text-transform: none;
+                        color: $color-default;
+                    }
+                }
+            }
+        }
+    }
+
+    //Container
+    .container{
+        padding-top: 80px;
+
+
+        .main-container{
+            @include flexbox();
+            @include flex-direction(column);
+
+            .menu-sidebar{
+                order: 1;
+                @include flexbox();
+                @include flex-direction(column);
+                position: fixed;
+                width: 210px;
+                padding: 45px 45px 45px 45px;
+                height: 100%;
+                background: $bg-default;
+                border-right: 1px solid #f2f2f2;
+                overflow: auto;
+
+                .title{
+                    font-family: $fontPlutoLight;
+                    font-size: $font-size-medium;
+                    margin-bottom: 5px;
+                    // border-bottom: 1px solid #f2f2f2;
+                    text-transform: uppercase;
+
+                    &:first-child {
+                        margin-bottom: 20px;
+                        font-size: $font-size-large;
+                    }
+
+                }
+
+                .menu-content {
+                    ul {
+                        li {
+                            font-family: $fontPlutoLight;
+                            font-size: $font-size-small;
+                            margin-top: 10px;
+                            margin-bottom: 15px;
+
+                            a{
+                                @include transition (0.2s);
+                                color: $color-tertiary;
+                                font-style: none;
+                                text-decoration: none;
+                                text-transform: none;
+
+                                &:hover {
+                                    color: $color-segundary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content-container{
+                order: 2;
+                @include flexbox();
+                width: 100%;
+                padding: 45px 20px 45px 20px;
+                height: 100%;
+                // overflow: auto;
+                width: 840px;
+                margin-left: auto;
+                margin-right: auto;
+
+
+
+                .content-component{
+                    @include transition(0.5s);
+                    width: 100%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+
+                    .block-component{
+                      margin: 12px 0 12px 0;
+                      padding: 5px 0 5px 0;
+
+                      .align-center{
+                        @include flexbox();
+                        align-items: center;
+                      }
+
+                    }
+
+                    .line-divider {
+                      width: 100%;
+                      height: 2px;
+                      background-color: #f2f2f2;
+                      margin-top: 25px;
+                      margin-bottom: 5px;
+                      display: block;
+                    }
+
+                    h2 {
+                        font-family: $fontPlutoLight;
+                        font-size: $font-size-big-large;
+                        text-transform: uppercase;
+                        color: $color-segundary;
+                        // border-bottom: 1px solid #e7e7e7;
+                        padding-bottom: 6px;
+                        width: 100%;
+                        max-width: 100%;
+                        margin-bottom: 20px;
+
+
+                    }
+
+                    .sub-title {
+                        color: $color-tertiary !important;margin-bottom: 10px;
+                        margin-top: 18px;
+                        font-size: $font-size-large;
+                        color: $color-primary !important;
+
+                        &.margin-large{
+                          margin-bottom: 25px;
+                        }
+
+                    }
+
+                    h3 {
+                        width: 100%;
+                        font-family: $fontPlutoLight;
+                        font-size: $font-size-large;
+                        line-height: 25px;
+                        color: $color-primary;
+                        margin-top: 10px;
+                    }
+
+                    p {
+                        font-size: $font-size-small;
+                        font-family: $fontPlutoLight;
+                        color: $color-primary;
+                        line-height: 25px;
+                    }
+
+                    xmp {
+                        display: inline;
+                        background-color: #f2f2f2;
+                        margin-left: 7px;
+                        margin-right: 7px;
+                    }
+
+
+
+                    .row-content {
+                        @include flexbox();
+                        @include flex-direction(row);
+                        @include align-self(center);
+                        @include justify-content(space-around);
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+
+                        &.space-ard {
+                          @include justify-content(space-around);
+                          width: 100%;
+                          flex-wrap: wrap;
+
+                          pre{
+                            flex: 1 1 33.33%;
+
+                            code{
+                              text-align: center;
+                              margin-bottom: 10px;
+                              margin: 5px 5px 5px 5px;
+                            }
+                          }
+                        }
+
+                        &.column{
+                          @include flex-direction(column);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+

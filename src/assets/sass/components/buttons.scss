@@ -1,0 +1,171 @@
+%button {
+    font-family: $fontPlutoMedium;
+    font-size: $font-size-little;
+    border-radius: 5px;
+    padding: 15px 38px;
+    border: 1px;
+    color: #fff;
+    @include transition(0.3s);
+    max-width: fit-content;
+}
+
+%ghostButton {
+    @extend %button;
+    background: #fff;
+    border: 1px solid;
+}
+
+.button {
+    @extend %button;
+
+    &.btn-primary{
+      color: $color-default;
+      background-color: $institutionalColor-primary;
+
+      &:hover {
+          background-color: $institutionalColor-segundary;
+      }
+
+      // Botão institucional
+      &.institutional{
+        background-color: $institutionalColor-primary;
+
+        &:hover{
+          background-color: $institutionalColor-primary;
+        }
+      }
+
+      // Botão Universo Saude
+      &.universeHealth{
+        background-color: $universeHealth-primary;
+
+        &:hover {
+          background-color: $universeHealth-segundary;
+        }
+      }
+
+      // Botão Universo Infantil
+      &.universeChildren{
+        background-color: $universeChildren-primary;
+
+        &:hover {
+          background-color: $universeChildren-segundary;
+        }
+      }
+
+      // Botão Beleza e Saude
+      &.universeBeauty{
+        background-color: $universeBeauty-primary;
+
+        &:hover {
+          background-color: $universeBeauty-segundary;
+        }
+      }
+
+      // Botão Beleza e Maquiagem
+      &.universeMakeup {
+        background-color: $universeMakeup-primary;
+
+        &:hover{
+          background-color: $universeMakeup-segundary;
+        }
+      }
+
+      //Botão Cuidados Diarios
+      &.universeCare{
+        background-color: $universeCare-primary;
+
+        &:hover{
+          background-color: $universeCare-segundary;
+        }
+      }
+    }
+
+    &.btn-segundary{
+        color: $color-default;
+        background-color: $color-raia-default-segundary;
+
+        &:hover {
+            background-color: $color-raia-default-segundary-hover;
+        }
+
+    }
+
+    &.btn-ghost{
+      color: $color-raia-ghost;
+      background-color: #fff;
+      border: 1px solid $color-raia-ghost;
+
+      &:hover {
+          background-color: $color-raia-ghost;
+          color: $color-default;
+      }
+
+        // Botão institucional
+      &.institutional{
+        color: $institutionalColor-primary;
+        border: 1px solid $institutionalColor-primary;
+
+        &:hover{
+          background-color: $colorDefault;
+          border: 1px solid $institutionalColor-segundary;
+        }
+      }
+
+      // Botão Universo Saude
+      &.universeHealth{
+        color: $universeHealth-primary;
+        border: 1px solid $universeHealth-primary;
+
+        &:hover {
+          background-color: $colorDefault;
+          border: 1px solid $universeHealth-segundary;
+        }
+      }
+
+      // Botão Universo Infantil
+      &.universeChildren{
+        color: $universeChildren-primary;
+        border: 1px solid $universeChildren-primary;
+
+        &:hover {
+          background-color: $colorDefault;
+          border: 1px solid $universeChildren-segundary;
+        }
+      }
+
+      // Botão Beleza e Saude
+      &.universeBeauty{
+        color: $universeBeauty-primary;
+        border: 1px solid $universeBeauty-primary;
+
+        &:hover {
+          background-color: $colorDefault;
+          border: 1px solid $universeBeauty-segundary;
+        }
+      }
+
+      // Botão Beleza e Maquiagem
+      &.universeMakeup {
+        color: $universeMakeup-primary;
+        border: 1px solid $universeMakeup-primary;
+
+        &:hover {
+          background-color: $colorDefault;
+          border: 1px solid $universeMakeup-segundary;
+        }
+      }
+
+      //Botão Cuidados Diarios
+      &.universeCare{
+        color: $universeCare-primary;
+        border: 1px solid $universeCare-primary;
+
+        &:hover {
+          background-color: $colorDefault;
+          border: 1px solid $universeCare-segundary;
+        }
+      }
+    }
+
+}

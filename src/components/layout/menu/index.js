@@ -5,13 +5,13 @@ const Menu = () => (
     <div className='menu'>
       <ul className='left'>
         <li className='logo'>
-          <h1>RD Design System</h1>
+          <h1>DrogaRaia</h1>
         </li>
       </ul>
 
       <ul className='right'>
         <li className='item'>
-          <a href=''>Raia Drogaria</a>
+          <a href=''>Drogaria</a>
         </li>
         <li className='item'>
           <a href=''>Drogasil</a>

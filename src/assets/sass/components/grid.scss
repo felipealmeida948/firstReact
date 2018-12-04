@@ -1,0 +1,74 @@
+%box {
+  background-color: #fff;
+  display: block;
+  height: 100px;
+  padding: 10px;
+  box-shadow: 2px 2px 20px -2px rgba(0, 0, 0, 0.28);
+  font-family: $fontPlutoRegular;
+  color: $cTextBlock;
+  @include border-radius(6px);
+}
+
+.box {
+  @extend %box;
+
+  &.text{
+    display: flex;
+
+    &.center{
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.top{
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    &.bottom {
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    &.center-left{
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &.center-right{
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &.top-left{
+
+    }
+
+    &.top-right{
+
+    }
+
+  }
+
+
+  &.height-10 {
+    height: 10%;
+  }
+
+  &.height-20 {
+    height: 20%;
+  }
+
+  &.height-30 {
+    height: 30%;
+  }
+
+  &.height-40 {
+    height: 40%;
+  }
+
+  &.height-50 {
+    height: 50%;
+  }
+
+}
